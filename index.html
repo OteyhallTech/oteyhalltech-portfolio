@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tommy Otey-Hall | IT & Cloud Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="assets/logo.jpeg" alt="OteyhallTech Logo" class="nav-logo-img" />
+        <span>OteyhallTech</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for entry-level roles
+      </div>
+      <h1 class="hero-title">
+        Tommy<br />
+        <span class="gradient-text">Otey-Hall</span>
+      </h1>
+      <p class="hero-sub">IT Support &amp; Cloud Practitioner</p>
+      <p class="hero-desc">
+        Building hands-on experience with AWS, cloud security, and IT fundamentals.
+        Passionate about making infrastructure reliable, secure, and efficient.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Who I Am</h2>
+          <p>
+            I'm an aspiring IT and cloud professional with a focus on AWS infrastructure,
+            identity management, and cloud security. I'm actively building hands-on labs to
+            strengthen my understanding of real-world cloud environments.
+          </p>
+          <p>
+            My goal is to land an entry-level IT Support or Cloud role where I can
+            contribute, grow, and keep learning. I approach every project with
+            curiosity, attention to detail, and a security-first mindset.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">2</span>
+              <span class="stat-label">AWS Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">IAM</span>
+              <span class="stat-label">Identity & Access</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">S3</span>
+              <span class="stat-label">Cloud Storage</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-inner">
+            <div class="terminal-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">profile.json</span>
+            </div>
+            <pre class="terminal-code"><span class="json-key">"name"</span>: <span class="json-str">"Tommy Otey-Hall"</span>,
+<span class="json-key">"role"</span>: <span class="json-str">"IT Support / Cloud"</span>,
+<span class="json-key">"focus"</span>: [
+  <span class="json-str">"AWS IAM"</span>,
+  <span class="json-str">"Cloud Security"</span>,
+  <span class="json-str">"IT Administration"</span>
+],
+<span class="json-key">"location"</span>: <span class="json-str">"United States"</span>,
+<span class="json-key">"status"</span>: <span class="json-str">"Open to Work ✓"</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">AWS Cloud Labs</h2>
+      <p class="section-desc">Hands-on projects completed in AWS to build real-world cloud skills.</p>
+
+      <!-- PROJECT 1: IAM -->
+      <div class="project-card" id="iam-project">
+        <div class="project-header">
+          <div class="project-icon iam-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="project-meta">
+            <span class="project-tag">AWS IAM</span>
+            <span class="project-tag">Cloud Security</span>
+            <span class="project-tag">Identity Management</span>
+          </div>
+        </div>
+        <h3 class="project-title">AWS IAM Portfolio Lab</h3>
+        <p class="project-desc">
+          Built foundational AWS Identity and Access Management skills through hands-on configuration.
+          Created a generic IAM user with read-only permissions applying least-privilege access, and
+          configured an IAM role with EC2 as the trusted entity to understand how AWS services
+          securely assume roles.
+        </p>
+
+        <div class="project-details">
+          <div class="detail-col">
+            <h4>Key Tasks</h4>
+            <ul>
+              <li>Created a generic IAM user with read-only permissions</li>
+              <li>Restricted the user from modifying resources</li>
+              <li>Configured an IAM role with EC2 as trusted entity</li>
+              <li>Applied AmazonS3ReadOnlyAccess policy to role</li>
+              <li>Reviewed IAM policy behavior and trust relationships</li>
+            </ul>
+          </div>
+          <div class="detail-col">
+            <h4>Skills Demonstrated</h4>
+            <ul>
+              <li>Least-privilege access control</li>
+              <li>IAM user & role configuration</li>
+              <li>Cloud security fundamentals</li>
+              <li>AWS administration</li>
+              <li>Identity & access management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screenshots-section">
+          <h4>Project Screenshots</h4>
+          <div class="screenshots-grid">
+            <div class="screenshot-item" onclick="openModal('assets/iam/01-iam-user-created-retrieve-password.png', 'IAM User Created: Retrieve Password')">
+              <img src="assets/iam/01-iam-user-created-retrieve-password.png" alt="IAM User Created" loading="lazy" />
+              <div class="screenshot-caption">01 — IAM User Created</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/iam/02-iam-users-list-dev-user-confirmed.png', 'IAM Users List: Dev-user Confirmed')">
+              <img src="assets/iam/02-iam-users-list-dev-user-confirmed.png" alt="IAM Users List" loading="lazy" />
+              <div class="screenshot-caption">02 — Users List Confirmed</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/iam/03-dev-user-permissions-policies.png', 'Dev-user Permissions Policies')">
+              <img src="assets/iam/03-dev-user-permissions-policies.png" alt="Dev-user Permissions" loading="lazy" />
+              <div class="screenshot-caption">03 — Permissions Policies</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/iam/04-iam-roles-list-before.png', 'IAM Roles List (Before)')">
+              <img src="assets/iam/04-iam-roles-list-before.png" alt="IAM Roles Before" loading="lazy" />
+              <div class="screenshot-caption">04 — Roles List (Before)</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/iam/05-create-role-select-trusted-entity-ec2.png', 'Create Role: Select Trusted Entity (EC2)')">
+              <img src="assets/iam/05-create-role-select-trusted-entity-ec2.png" alt="Select Trusted Entity" loading="lazy" />
+              <div class="screenshot-caption">05 — Select Trusted Entity</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/iam/07-create-role-s3-readonly-selected.png', 'AmazonS3ReadOnlyAccess Selected')">
+              <img src="assets/iam/07-create-role-s3-readonly-selected.png" alt="S3 ReadOnly Selected" loading="lazy" />
+              <div class="screenshot-caption">06 — S3 ReadOnly Policy</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/iam/08-create-role-name-review.png', 'Create Role: Name, Review & Trust Policy')">
+              <img src="assets/iam/08-create-role-name-review.png" alt="Name and Review" loading="lazy" />
+              <div class="screenshot-caption">07 — Name & Review</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/iam/09-iam-roles-list-ec2-s3-role-created.png', 'EC2-S3-ReadOnly-Role Created')">
+              <img src="assets/iam/09-iam-roles-list-ec2-s3-role-created.png" alt="Role Created" loading="lazy" />
+              <div class="screenshot-caption">08 — Role Created</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-outcome">
+          <span class="outcome-label">Outcome</span>
+          <p>Strengthened understanding of AWS IAM, secure permission design, and trusted entity relationships in a cloud environment.</p>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: S3 -->
+      <div class="project-card" id="s3-project">
+        <div class="project-header">
+          <div class="project-icon s3-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+          </div>
+          <div class="project-meta">
+            <span class="project-tag">Amazon S3</span>
+            <span class="project-tag">Cloud Storage</span>
+            <span class="project-tag">AWS Console</span>
+          </div>
+        </div>
+        <h3 class="project-title">AWS S3 Storage Lab</h3>
+        <p class="project-desc">
+          Built foundational Amazon S3 skills by creating a storage bucket, organizing objects into folders,
+          uploading a sample file, and reviewing bucket configuration settings including region, ARN,
+          versioning status, and access permissions through the AWS Management Console.
+        </p>
+
+        <div class="project-details">
+          <div class="detail-col">
+            <h4>Key Tasks</h4>
+            <ul>
+              <li>Created S3 bucket <code>oteyhalltech-s3-lab-2026</code></li>
+              <li>Created <code>Project-Files</code> folder inside the bucket</li>
+              <li>Uploaded a sample JPEG to test object storage</li>
+              <li>Verified uploaded object appeared inside folder</li>
+              <li>Reviewed bucket properties: region, ARN, versioning</li>
+            </ul>
+          </div>
+          <div class="detail-col">
+            <h4>Skills Demonstrated</h4>
+            <ul>
+              <li>Cloud storage setup & configuration</li>
+              <li>Bucket creation and management</li>
+              <li>Object and folder organization</li>
+              <li>File upload validation</li>
+              <li>AWS Console navigation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screenshots-section">
+          <h4>Project Screenshots</h4>
+          <div class="screenshots-grid">
+            <div class="screenshot-item" onclick="openModal('assets/s3/Thomas-S3-portfolio-lab-2026.png', 'S3 Bucket Created')">
+              <img src="assets/s3/Thomas-S3-portfolio-lab-2026.png" alt="S3 Bucket Created" loading="lazy" />
+              <div class="screenshot-caption">01 — S3 Bucket Created</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/s3/02-bucket-created-success.png', 'Bucket Created: Success Confirmation')">
+              <img src="assets/s3/02-bucket-created-success.png" alt="Bucket Created Success" loading="lazy" />
+              <div class="screenshot-caption">02 — Success Confirmation</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/s3/04-folder-created-project-files.png', 'Project-Files Folder Created')">
+              <img src="assets/s3/04-folder-created-project-files.png" alt="Folder Created" loading="lazy" />
+              <div class="screenshot-caption">03 — Folder Created</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/s3/Uploaded image.png', 'File Uploaded Successfully')">
+              <img src="assets/s3/Uploaded image.png" alt="File Uploaded" loading="lazy" />
+              <div class="screenshot-caption">04 — File Uploaded</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/s3/04-bucket-properties.png', 'Bucket Properties')">
+              <img src="assets/s3/04-bucket-properties.png" alt="Bucket Properties" loading="lazy" />
+              <div class="screenshot-caption">05 — Bucket Properties</div>
+            </div>
+            <div class="screenshot-item" onclick="openModal('assets/s3/S3 permissions.png', 'S3 Permissions Settings')">
+              <img src="assets/s3/S3 permissions.png" alt="S3 Permissions" loading="lazy" />
+              <div class="screenshot-caption">06 — Permissions Settings</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-outcome">
+          <span class="outcome-label">Outcome</span>
+          <p>Strengthened understanding of how Amazon S3 stores and organizes objects, and how to manage bucket resources through the AWS Console.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-desc">Cloud, security, and IT tools I've worked with hands-on.</p>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>AWS Services</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">IAM</span>
+            <span class="skill-tag">Amazon S3</span>
+            <span class="skill-tag">EC2</span>
+            <span class="skill-tag">AWS Console</span>
+            <span class="skill-tag">AWS Managed Policies</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Cloud Security</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Least-Privilege Access</span>
+            <span class="skill-tag">Role-Based Access Control</span>
+            <span class="skill-tag">Trusted Entity Configuration</span>
+            <span class="skill-tag">Permission Policy Design</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>IT Fundamentals</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Cloud Administration</span>
+            <span class="skill-tag">Identity Management</span>
+            <span class="skill-tag">Storage Configuration</span>
+            <span class="skill-tag">Technical Documentation</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Tools & Platforms</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS Management Console</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-desc">
+        I'm actively looking for entry-level IT Support or Cloud roles.
+        If you'd like to connect or have an opportunity, reach out!
+      </p>
+      <div class="contact-links">
+        <a href="mailto:oteyhall.tech@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">oteyhall.tech@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://github.com/OteyhallTech" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/OteyhallTech</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built by Tommy Otey-Hall &bull; OteyhallTech &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" onclick="closeModal()">
+    <div class="modal-inner" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <p class="modal-title" id="modal-title"></p>
+      <img class="modal-img" id="modal-img" src="" alt="" />
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
