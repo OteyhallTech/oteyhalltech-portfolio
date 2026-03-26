@@ -197,14 +197,113 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </button>
           <div class="screenshots-panel" id="s3-shots">
-            <div class="shots-grid">
-              <div class="shot" onclick="openModal('assets/s3/Thomas-S3-portfolio-lab-2026.png','S3 Bucket Created')"><img src="assets/s3/Thomas-S3-portfolio-lab-2026.png" alt="Bucket Created" loading="lazy"/><span>Bucket Created</span></div>
-              <div class="shot" onclick="openModal('assets/s3/02-bucket-created-success.png','Success Confirmation')"><img src="assets/s3/02-bucket-created-success.png" alt="Success" loading="lazy"/><span>Success</span></div>
-              <div class="shot" onclick="openModal('assets/s3/04-folder-created-project-files.png','Folder Created')"><img src="assets/s3/04-folder-created-project-files.png" alt="Folder" loading="lazy"/><span>Folder Created</span></div>
-              <div class="shot" onclick="openModal('assets/s3/Uploaded image.png','File Uploaded')"><img src="assets/s3/Uploaded image.png" alt="Uploaded" loading="lazy"/><span>File Uploaded</span></div>
-              <div class="shot" onclick="openModal('assets/s3/04-bucket-properties.png','Bucket Properties')"><img src="assets/s3/04-bucket-properties.png" alt="Properties" loading="lazy"/><span>Properties</span></div>
-              <div class="shot" onclick="openModal('assets/s3/S3 permissions.png','Permissions')"><img src="assets/s3/S3 permissions.png" alt="Permissions" loading="lazy"/><span>Permissions</span></div>
+            <div class="steps-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Screenshots &amp; Step-by-Step Walkthrough
             </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/s3/Thomas-S3-portfolio-lab-2026.png','Step 1 — Bucket Creation: S3 bucket oteyhalltech-s3-lab-2026 visible in bucket list')">
+                <img src="assets/s3/Thomas-S3-portfolio-lab-2026.png" alt="S3 Bucket Created" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 1</div>
+                <div class="step-title">Bucket Creation</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Created an S3 bucket named <code>oteyhalltech-s3-lab-2026</code> — visible in the S3 bucket list confirming successful provisioning.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Buckets are the foundational storage containers in Amazon S3. Every object stored in S3 must live inside a bucket, and bucket names must be globally unique across all AWS accounts.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Cloud storage setup and resource creation in AWS — understanding bucket naming conventions and regional deployment.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/s3/02-bucket-created-success.png','Step 2 — Success Confirmation: AWS console confirms bucket was created successfully')">
+                <img src="assets/s3/02-bucket-created-success.png" alt="Bucket Created Success" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 2</div>
+                <div class="step-title">Creation Confirmed</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>AWS Management Console displayed a success confirmation banner after the bucket was created, validating the provisioning completed without errors.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Confirming resource creation through console feedback is a critical habit in cloud operations — it ensures resources are provisioned as expected before proceeding.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>AWS Console navigation and cloud resource validation — interpreting success states and confirming operations in the AWS environment.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/s3/04-folder-created-project-files.png','Step 3 — Folder Organization: Project-Files folder created inside the S3 bucket')">
+                <img src="assets/s3/04-folder-created-project-files.png" alt="Folder Created" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 3</div>
+                <div class="step-title">Folder Organization</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Created a logical folder named <code>Project-Files</code> inside the S3 bucket to organize uploaded objects into a structured hierarchy.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>S3 uses a flat storage model, but prefixes (folders) simulate directory structures. Organizing objects this way improves scalability, access control granularity, and long-term manageability at scale.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Object organization and data structuring in AWS — applying best practices for S3 folder hierarchies and prefix-based organization.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/s3/Uploaded image.png','Step 4 — File Upload: JPEG file uploaded and visible inside the Project-Files folder')">
+                <img src="assets/s3/Uploaded image.png" alt="File Uploaded" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 4</div>
+                <div class="step-title">File Upload &amp; Verification</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Uploaded a JPEG file into the <code>Project-Files</code> folder and confirmed it appears correctly inside the bucket, verifying object storage integrity.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Uploading and verifying objects demonstrates the core S3 workflow — storing data in the cloud and confirming it is accessible. Verification is essential to ensure no corruption or misconfiguration occurred during upload.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Object upload and validation in AWS — confirming data integrity and successful cloud storage operations through the S3 console.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/s3/04-bucket-properties.png','Step 5 — Bucket Properties: Region, ARN, versioning, and encryption settings reviewed')">
+                <img src="assets/s3/04-bucket-properties.png" alt="Bucket Properties" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 5</div>
+                <div class="step-title">Bucket Properties Review</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Reviewed the bucket's properties page, including region, ARN, versioning status, and server-side encryption settings in the AWS Management Console.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Understanding configuration settings is critical for security, compliance, cost optimization, and performance. The ARN is required for IAM policies; versioning protects against accidental deletion; region affects latency and data residency.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Cloud configuration analysis and resource inspection — reading and interpreting AWS resource metadata to support informed infrastructure decisions.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/s3/S3 permissions.png','Step 6 — Permissions Settings: Bucket ACL and public access block settings reviewed')">
+                <img src="assets/s3/S3 permissions.png" alt="S3 Permissions" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 6</div>
+                <div class="step-title">Permissions &amp; Access Control</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Reviewed the bucket's permissions tab, including Block Public Access settings and ACL configuration to understand the access control posture of the bucket.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>S3 bucket permissions are a leading cause of cloud security incidents. Reviewing and locking down public access by default is a security best practice aligned with AWS's Shared Responsibility Model and least-privilege principles.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Cloud security analysis and access control configuration — identifying and validating bucket-level permissions to prevent unintended data exposure.</span></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
