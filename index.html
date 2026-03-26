@@ -162,14 +162,113 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </button>
           <div class="screenshots-panel" id="iam-shots">
-            <div class="shots-grid">
-              <div class="shot" onclick="openModal('assets/iam/01-iam-user-created-retrieve-password.png','IAM User Created')"><img src="assets/iam/01-iam-user-created-retrieve-password.png" alt="IAM User Created" loading="lazy"/><span>IAM User Created</span></div>
-              <div class="shot" onclick="openModal('assets/iam/02-iam-users-list-dev-user-confirmed.png','Users List Confirmed')"><img src="assets/iam/02-iam-users-list-dev-user-confirmed.png" alt="Users List" loading="lazy"/><span>Users List</span></div>
-              <div class="shot" onclick="openModal('assets/iam/03-dev-user-permissions-policies.png','Permissions Policies')"><img src="assets/iam/03-dev-user-permissions-policies.png" alt="Permissions" loading="lazy"/><span>Permissions</span></div>
-              <div class="shot" onclick="openModal('assets/iam/05-create-role-select-trusted-entity-ec2.png','Trusted Entity EC2')"><img src="assets/iam/05-create-role-select-trusted-entity-ec2.png" alt="Trusted Entity" loading="lazy"/><span>Trusted Entity</span></div>
-              <div class="shot" onclick="openModal('assets/iam/07-create-role-s3-readonly-selected.png','S3 ReadOnly Policy')"><img src="assets/iam/07-create-role-s3-readonly-selected.png" alt="S3 ReadOnly" loading="lazy"/><span>S3 ReadOnly</span></div>
-              <div class="shot" onclick="openModal('assets/iam/09-iam-roles-list-ec2-s3-role-created.png','Role Created')"><img src="assets/iam/09-iam-roles-list-ec2-s3-role-created.png" alt="Role Created" loading="lazy"/><span>Role Created</span></div>
+            <div class="steps-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Screenshots &amp; Step-by-Step Walkthrough
             </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/iam/01-iam-user-created-retrieve-password.png','Step 1 — IAM User Creation: Dev-user created with console sign-in URL and password retrieval screen')">
+                <img src="assets/iam/01-iam-user-created-retrieve-password.png" alt="IAM User Created" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 1</div>
+                <div class="step-title">IAM User Creation</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Created a new IAM user named <code>Dev-user</code> — AWS confirms creation with a one-time console sign-in URL and secure password retrieval screen.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Creating dedicated IAM users instead of using the root account is a foundational AWS security best practice. It limits blast radius — if credentials are compromised, only that user's permissions are at risk, not the entire account.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Identity management and secure access setup — provisioning IAM users with controlled, non-root access to AWS resources.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/iam/02-iam-users-list-dev-user-confirmed.png','Step 2 — User List Confirmed: IAM Users dashboard showing Dev-user and thomas-admin')">
+                <img src="assets/iam/02-iam-users-list-dev-user-confirmed.png" alt="IAM Users List" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 2</div>
+                <div class="step-title">User List Verified</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Navigated to the IAM Users dashboard to confirm <code>Dev-user</code> appears alongside <code>thomas-admin</code>, verifying the user was successfully provisioned in the account.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Verifying newly created resources in the console is a critical cloud operations habit. It confirms the action completed successfully and establishes a baseline of account users — important for auditing and access reviews.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Cloud resource validation and IAM account auditing — confirming provisioned identities and maintaining awareness of all users with access to the account.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/iam/03-dev-user-permissions-policies.png','Step 3 — Permissions Assignment: Dev-user showing IAMUserChangePassword and PowerUserAccess policies')">
+                <img src="assets/iam/03-dev-user-permissions-policies.png" alt="Dev-user Permissions" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 3</div>
+                <div class="step-title">Permissions Assignment</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Reviewed <code>Dev-user</code>'s permissions showing two attached policies: <code>IAMUserChangePassword</code> (directly attached) and <code>PowerUserAccess</code> (inherited via the Developers group), scoping what actions the user can perform.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Assigning targeted permissions follows the principle of least privilege — users receive only the access required for their role. Group-based policies also enable scalable permission management across multiple users.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Access control and permission management — configuring IAM policies at both the user and group level to enforce least-privilege access in a cloud environment.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/iam/05-create-role-select-trusted-entity-ec2.png','Step 4 — IAM Role Configuration: EC2 selected as the trusted entity in the Create Role wizard')">
+                <img src="assets/iam/05-create-role-select-trusted-entity-ec2.png" alt="Create Role Trusted Entity" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 4</div>
+                <div class="step-title">IAM Role Configuration</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>In the Create Role wizard, selected <code>AWS Service</code> as the trusted entity type and chose <code>EC2</code> as the use case — establishing which service can assume this role.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>IAM roles allow AWS services like EC2 to securely interact with other AWS resources without hardcoding credentials into instances. This is the AWS-recommended approach for service-to-service authentication and eliminates the security risk of long-lived access keys.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Role-based access control and service-to-service authentication — configuring trusted entities so AWS services can securely assume roles and access resources.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/iam/07-create-role-s3-readonly-selected.png','Step 5 — Policy Attachment: AmazonS3ReadOnlyAccess policy selected for the EC2 role')">
+                <img src="assets/iam/07-create-role-s3-readonly-selected.png" alt="S3 ReadOnly Policy Selected" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 5</div>
+                <div class="step-title">Policy Attachment</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Filtered the permissions policy list and selected <code>AmazonS3ReadOnlyAccess</code> to attach to the role — scoping EC2 instances to read-only access to S3 buckets.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Policies define exactly what actions are permitted and form the core of AWS security. Attaching read-only access (rather than full access) to the role demonstrates deliberate least-privilege design — EC2 can read from S3 but cannot modify, delete, or upload objects.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Policy management and permission structuring — selecting and attaching AWS managed policies to enforce precise, least-privilege access controls at the role level.</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+              <div class="step-img-wrap" onclick="openModal('assets/iam/09-iam-roles-list-ec2-s3-role-created.png','Step 6 — Role Created & Validated: EC2-S3-ReadOnly-Role confirmed in IAM Roles list')">
+                <img src="assets/iam/09-iam-roles-list-ec2-s3-role-created.png" alt="Role Created" loading="lazy"/>
+                <div class="step-img-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+              </div>
+              <div class="step-info">
+                <div class="step-num">Step 6</div>
+                <div class="step-title">Role Created &amp; Validated</div>
+                <div class="step-detail">
+                  <div class="step-row"><span class="step-label">Action</span><span>Confirmed successful creation of <code>EC2-S3-ReadOnly-Role</code> in the IAM Roles list — green success banner visible, role shown with <code>AWS Service: ec2</code> as the trusted entity.</span></div>
+                  <div class="step-row"><span class="step-label">Why It Matters</span><span>Validating the completed role confirms the full security configuration is in place and functional. Seeing the trusted entity type listed confirms EC2 is correctly scoped — ensuring only EC2 instances can assume this role, not other services or users.</span></div>
+                  <div class="step-row"><span class="step-label">Skill Demonstrated</span><span>Security validation and cloud resource verification — confirming IAM role configurations are correctly provisioned and that security controls are operating as designed.</span></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
