@@ -233,7 +233,7 @@ body { background: var(--bg); color: var(--text); }
 .about-card-sub { font-size: 0.82rem; color: var(--text-dim); }
 
 /* ===== PROJECTS ===== */
-.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.projects-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
 .project-card {
   background: var(--card2); border: 1px solid var(--border);
   border-radius: 16px; padding: 1.75rem;
@@ -375,7 +375,7 @@ body { background: var(--bg); color: var(--text); }
   border-bottom: 1px solid var(--border);
 }
 .step-card {
-  display: grid; grid-template-columns: 200px 1fr;
+  display: grid; grid-template-columns: 260px 1fr;
   gap: 1.25rem; margin-bottom: 1.25rem;
   background: var(--card); border: 1px solid var(--border);
   border-radius: 12px; overflow: hidden;
