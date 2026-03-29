@@ -8,6 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    .shot-desc {
+      font-size: 0.72rem;
+      color: var(--text-muted, #94a3b8);
+      margin: 6px 4px 0 4px;
+      line-height: 1.5;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
 
@@ -163,12 +173,12 @@
           </button>
           <div class="screenshots-panel" id="iam-shots">
             <div class="shots-grid">
-              <div class="shot" onclick="openModal('assets/iam/01-iam-user-created-retrieve-password.png','IAM User Created')"><img src="assets/iam/01-iam-user-created-retrieve-password.png" alt="IAM User Created" loading="lazy"/><span>IAM User Created</span></div>
-              <div class="shot" onclick="openModal('assets/iam/02-iam-users-list-dev-user-confirmed.png','Users List Confirmed')"><img src="assets/iam/02-iam-users-list-dev-user-confirmed.png" alt="Users List" loading="lazy"/><span>Users List</span></div>
+              <div class="shot" onclick="openModal('assets/iam/01-iam-user-created-retrieve-password.png','IAM User Created')"><img src="assets/iam/01-iam-user-created-retrieve-password.png" alt="IAM User Created" loading="lazy"/><span>IAM User Created</span><p class="shot-desc">The IAM user creation wizard at Step 4 (Retrieve password), with a green success banner confirming "User created successfully." Shows the console sign-in URL, username Dev-user, and a masked console password. Proves the IAM user was successfully created with console access credentials.</p></div>
+              <div class="shot" onclick="openModal('assets/iam/02-iam-users-list-dev-user-confirmed.png','Users List Confirmed')"><img src="assets/iam/02-iam-users-list-dev-user-confirmed.png" alt="Users List" loading="lazy"/><span>Users List</span><p class="shot-desc">The IAM Users list page showing 2 users total: Dev-user and thomas-admin. Dev-user was last active 41 minutes ago with 1 group and no MFA configured. thomas-admin has MFA (Virtual), was last active 4 hours ago, with a password age of 17 days. Confirms successful multi-user account setup.</p></div>
               <div class="shot" onclick="openModal('assets/iam/03-dev-user-permissions-policies.png','Permissions Policies')"><img src="assets/iam/03-dev-user-permissions-policies.png" alt="Permissions" loading="lazy"/><span>Permissions</span></div>
-              <div class="shot" onclick="openModal('assets/iam/05-create-role-select-trusted-entity-ec2.png','Trusted Entity EC2')"><img src="assets/iam/05-create-role-select-trusted-entity-ec2.png" alt="Trusted Entity" loading="lazy"/><span>Trusted Entity</span></div>
-              <div class="shot" onclick="openModal('assets/iam/07-create-role-s3-readonly-selected.png','S3 ReadOnly Policy')"><img src="assets/iam/07-create-role-s3-readonly-selected.png" alt="S3 ReadOnly" loading="lazy"/><span>S3 ReadOnly</span></div>
-              <div class="shot" onclick="openModal('assets/iam/09-iam-roles-list-ec2-s3-role-created.png','Role Created')"><img src="assets/iam/09-iam-roles-list-ec2-s3-role-created.png" alt="Role Created" loading="lazy"/><span>Role Created</span></div>
+              <div class="shot" onclick="openModal('assets/iam/05-create-role-select-trusted-entity-ec2.png','Trusted Entity EC2')"><img src="assets/iam/05-create-role-select-trusted-entity-ec2.png" alt="Trusted Entity" loading="lazy"/><span>Trusted Entity</span><p class="shot-desc">The IAM Create role wizard at Step 1 (Select trusted entity), with AWS service selected as the trusted entity type. Use case is set to EC2 as the primary selection. Demonstrates configuring a service-linked IAM role with EC2 as the trusted entity, a core skill in AWS role-based access control.</p></div>
+              <div class="shot" onclick="openModal('assets/iam/07-create-role-s3-readonly-selected.png','S3 ReadOnly Policy')"><img src="assets/iam/07-create-role-s3-readonly-selected.png" alt="S3 ReadOnly" loading="lazy"/><span>S3 ReadOnly</span><p class="shot-desc">The IAM Create role wizard at Step 2 (Add permissions), searching for amazonS3 policies showing 8 matches. AmazonS3ReadOnlyAccess (AWS managed) is selected and highlighted, confirming it will be attached to the role. Proves intentional application of least-privilege access by choosing ReadOnly over FullAccess.</p></div>
+              <div class="shot" onclick="openModal('assets/iam/09-iam-roles-list-ec2-s3-role-created.png','Role Created')"><img src="assets/iam/09-iam-roles-list-ec2-s3-role-created.png" alt="Role Created" loading="lazy"/><span>Role Created</span><p class="shot-desc">The IAM Roles list page with a green success banner reading "Role EC2-S3-ReadOnly-Role created." The roles list now shows 4 roles total, including the newly created EC2-S3-ReadOnly-Role with AWS Service: ec2 as its trusted entity. Final confirmation that end-to-end IAM role creation was completed successfully.</p></div>
             </div>
           </div>
         </div>
@@ -198,12 +208,12 @@
           </button>
           <div class="screenshots-panel" id="s3-shots">
             <div class="shots-grid">
-              <div class="shot" onclick="openModal('assets/s3/Thomas-S3-portfolio-lab-2026.png','S3 Bucket Created')"><img src="assets/s3/Thomas-S3-portfolio-lab-2026.png" alt="Bucket Created" loading="lazy"/><span>Bucket Created</span></div>
-              <div class="shot" onclick="openModal('assets/s3/02-bucket-created-success.png','Success Confirmation')"><img src="assets/s3/02-bucket-created-success.png" alt="Success" loading="lazy"/><span>Success</span></div>
-              <div class="shot" onclick="openModal('assets/s3/04-folder-created-project-files.png','Folder Created')"><img src="assets/s3/04-folder-created-project-files.png" alt="Folder" loading="lazy"/><span>Folder Created</span></div>
-              <div class="shot" onclick="openModal('assets/s3/Uploaded image.png','File Uploaded')"><img src="assets/s3/Uploaded image.png" alt="Uploaded" loading="lazy"/><span>File Uploaded</span></div>
-              <div class="shot" onclick="openModal('assets/s3/04-bucket-properties.png','Bucket Properties')"><img src="assets/s3/04-bucket-properties.png" alt="Properties" loading="lazy"/><span>Properties</span></div>
-              <div class="shot" onclick="openModal('assets/s3/S3 permissions.png','Permissions')"><img src="assets/s3/S3 permissions.png" alt="Permissions" loading="lazy"/><span>Permissions</span></div>
+              <div class="shot" onclick="openModal('assets/s3/Thomas-S3-portfolio-lab-2026.png','S3 Bucket Created')"><img src="assets/s3/Thomas-S3-portfolio-lab-2026.png" alt="Bucket Created" loading="lazy"/><span>Bucket Created</span><p class="shot-desc">The Amazon S3 Buckets list page showing 1 general purpose bucket successfully created. Bucket name oteyhalltech-first-website-2026, AWS Region US East (Ohio) us-east-2, created March 8, 2026. Confirms the first S3 bucket was successfully provisioned in the correct region with a meaningful, project-specific name.</p></div>
+              <div class="shot" onclick="openModal('assets/s3/02-bucket-created-success.png','Success Confirmation')"><img src="assets/s3/02-bucket-created-success.png" alt="Success" loading="lazy"/><span>Success</span><p class="shot-desc">The S3 Buckets list page now showing 2 general purpose buckets, confirming a second bucket was created for the lab. Both oteyhalltech-first-website-2026 and oteyhalltech-s3-lab-2026 are listed in US East (Ohio) us-east-2. Demonstrates the ability to manage multiple S3 buckets and shows progression from the initial bucket to the dedicated lab bucket.</p></div>
+              <div class="shot" onclick="openModal('assets/s3/04-folder-created-project-files.png','Folder Created')"><img src="assets/s3/04-folder-created-project-files.png" alt="Folder" loading="lazy"/><span>Folder Created</span><p class="shot-desc">Inside the oteyhalltech-s3-lab-2026 bucket on the Objects tab, showing a green success banner confirming "Successfully created folder 'Project-Files'." The folder Project-Files/ is listed as an object of type Folder. Demonstrates understanding of S3 object organization using folder prefixes to logically structure data within a bucket.</p></div>
+              <div class="shot" onclick="openModal('assets/s3/Uploaded image.png','File Uploaded')"><img src="assets/s3/Uploaded image.png" alt="Uploaded" loading="lazy"/><span>File Uploaded</span><p class="shot-desc">The S3 Upload status page confirming a successful file upload with a green "Upload succeeded" banner. Destination s3://oteyhalltech-s3-lab-2026/Project-Files/, 1 file at 254.6 KB uploaded at 100% success with 0 failures. File type is image/jpeg with a status of Succeeded. Proves end-to-end object upload into a specific folder prefix.</p></div>
+              <div class="shot" onclick="openModal('assets/s3/04-bucket-properties.png','Bucket Properties')"><img src="assets/s3/04-bucket-properties.png" alt="Properties" loading="lazy"/><span>Properties</span><p class="shot-desc">The oteyhalltech-s3-lab-2026 bucket's Properties tab showing the full bucket configuration overview. Region US East (Ohio) us-east-2, created March 23, 2026. Bucket Versioning is Disabled, MFA delete is Disabled, and Bucket ABAC is Disabled. Demonstrates knowledge of bucket-level settings and the ability to review configuration options.</p></div>
+              <div class="shot" onclick="openModal('assets/s3/S3 permissions.png','Permissions')"><img src="assets/s3/S3 permissions.png" alt="Permissions" loading="lazy"/><span>Permissions</span><p class="shot-desc">The oteyhalltech-s3-lab-2026 bucket's Permissions tab showing the full permissions overview. Block all public access is set to On, confirming all public access is blocked. The bucket policy section states that public access is blocked and no custom bucket policy is currently applied. Demonstrates security awareness by correctly aligning with AWS best practices.</p></div>
             </div>
           </div>
         </div>
